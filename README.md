@@ -1,36 +1,32 @@
-RAG Chatbot using LangChain, OpenAI, and FAISS
+🤖 RAG Chatbot using LangChain, OpenAI, and FAISS
 
-Overview
-
-This project implements a Retrieval-Augmented Generation (RAG) chatbot capable of answering user questions based on custom PDF documents. The system combines Large Language Models (LLMs) with semantic document retrieval to provide accurate and context-aware responses.
-
-The application uses LangChain for orchestration, OpenAI models for natural language generation, FAISS for vector similarity search, and Streamlit for the user interface.
+A Retrieval-Augmented Generation (RAG) chatbot that enables users to interact with custom PDF documents using natural language. The application combines Large Language Models (LLMs) with semantic document retrieval to provide context-aware and accurate responses.
 
 ---
 
-Features
+🚀 Features
 
-- Upload and process PDF documents
+- PDF document upload and processing
 - Automatic text extraction and chunking
 - Embedding generation for document indexing
-- Semantic similarity search using FAISS
+- Semantic search using FAISS vector database
 - Context-aware question answering
-- Interactive Streamlit interface
-- Retrieval-Augmented Generation (RAG) workflow
+- Interactive Streamlit web interface
+- Retrieval-Augmented Generation (RAG) architecture
 
 ---
 
-Tech Stack
+🛠️ Tech Stack
 
 Frontend
 
 - Streamlit
 
-LLM Framework
+AI Framework
 
 - LangChain
 
-Language Model
+Large Language Model
 
 - OpenAI GPT Models
 
@@ -46,66 +42,76 @@ Data Processing
 
 Utilities
 
-- Python Dotenv
 - Tiktoken
+- Python Dotenv
 
 ---
 
-Architecture
+📂 Project Structure
+
+RAG-chatbot/
+│
+├── app.py
+├── requirements.txt
+├── .env
+├── data/
+├── vectorstore/
+└── README.md
+
+---
+
+⚙️ Architecture
 
 User Query
-
-↓
-
-Embedding Search
-
-↓
-
-FAISS Vector Database
-
-↓
-
-Relevant Document Retrieval
-
-↓
-
+     │
+     ▼
+Generate Query Embedding
+     │
+     ▼
+FAISS Vector Search
+     │
+     ▼
+Retrieve Relevant Chunks
+     │
+     ▼
 Prompt Augmentation
-
-↓
-
+     │
+     ▼
 OpenAI LLM
-
-↓
-
+     │
+     ▼
 Generated Response
 
 ---
 
-Workflow
+🔄 Workflow
 
 Document Processing
 
-- Upload PDF documents
-- Extract text content
-- Split text into manageable chunks
-- Generate embeddings
-- Store embeddings in FAISS index
+1. Upload PDF documents
+2. Extract text from PDFs
+3. Split text into smaller chunks
+4. Generate embeddings
+5. Store embeddings in FAISS vector database
 
 Question Answering
 
-- User submits a question
-- Query embedding is generated
-- Similar document chunks are retrieved
-- Retrieved context is combined with the query
-- OpenAI model generates a contextual response
+1. User asks a question
+2. Query embedding is generated
+3. Similar document chunks are retrieved
+4. Retrieved context is appended to the prompt
+5. OpenAI model generates a context-aware response
 
 ---
 
-Installation
+📦 Installation
+
+Clone the repository:
 
 git clone https://github.com/kritarth6/RAG-chatbot.git
-
 cd RAG-chatbot
+
+Install dependencies:
 
 pip install -r requirements.txt
 
@@ -119,43 +125,45 @@ streamlit run app.py
 
 ---
 
-Applications
+🎯 Applications
 
-- Enterprise Knowledge Management
+- Enterprise Knowledge Base Assistant
 - Internal Documentation Search
-- Customer Support Assistants
-- Research Assistants
-- Educational Question Answering Systems
+- Customer Support Chatbot
+- Research Assistant
+- Educational Question Answering
+- Document Intelligence Systems
 
 ---
 
-Skills Demonstrated
+🧠 Skills Demonstrated
 
 - Generative AI
 - Retrieval-Augmented Generation (RAG)
 - Large Language Models (LLMs)
-- Vector Databases
-- Semantic Search
 - LangChain
-- OpenAI API
+- OpenAI API Integration
+- Vector Databases
+- FAISS
+- Semantic Search
 - Prompt Engineering
 - Streamlit Development
-- NLP Applications
+- Natural Language Processing (NLP)
 
 ---
 
-Future Improvements
+🔮 Future Enhancements
 
 - Multi-document support
-- Chat history and memory
-- Hybrid search (keyword + semantic)
+- Conversation memory
+- Hybrid search (semantic + keyword)
 - Open-source LLM integration
 - Cloud deployment
 - Advanced document ranking
 
 ---
 
-Author
+👨‍💻 Author
 
 Kritarth Joshi
 
@@ -164,3 +172,7 @@ https://www.linkedin.com/in/kritarth-joshi-60493b304
 
 GitHub:
 https://github.com/kritarth6
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
